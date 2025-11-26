@@ -65,4 +65,4 @@ rm_preshift/
 ```
 
 ## 🔗 詳細文件
-更詳細的參數設定與實驗筆記，請參閱 [Docs/Paper_Notes](docs/paper_notes.md)
+更詳細的參數設定與實驗筆記，請參閱 [Docs/Paper_Notes](docs/Paper_Notes.md)

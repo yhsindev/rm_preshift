@@ -1,0 +1,8 @@
+# Ignore system files
+.DS_Store
+
+# Ignore Gem5 build output
+build/
+m5out/
+*.o
+*.pyc

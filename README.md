@@ -36,8 +36,8 @@
   - 評估對整個記憶體階層的系統級影響，目標改善幅度達 10%。 (Ref: Fig. 13)
 
 ## 🛠️ 技術細節與工具
-* **Simulator:** Gem5 / rtSim
-* **OS:** 建議使用 Ubuntu 20.04 LTS (Docker) 替代論文中的 Debian 8
+* **Simulator:** Gem5 / NVMSim
+* **OS:** Debian 12?
 * **Benchmarks:** SPEC2006, PARSEC, YCSB
 * **Modeling:** DESTINY (Area, Energy, Power)
 

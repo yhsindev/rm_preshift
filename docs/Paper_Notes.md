@@ -53,7 +53,7 @@ RM 的存取機制是序列化 (Serialized Access) 的。每一個 Cell 像是�
 
 
 ## 4. 關鍵參數設定 (System Configuration)
-**這是大家改 Code 最需要查的表，請整理在這裡：**
+**改 Code 需要查的表，請整理在這裡：**
 
 | Component | 參數 (Parameter) | 數值/設定 | Gem5 變數名 (Reference) |
 | :--- | :--- | :--- | :--- |

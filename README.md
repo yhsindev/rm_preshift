@@ -9,19 +9,31 @@
 - [ ] 取得 Benchmarks (SPEC2006, PARSEC)
 - [ ] 整合 DESTINY 功耗模型工具
 
-### Phase 1: 參數敏感度分析 (Parameter Sensitivity)
-> 目標：確定 L1/L2/LLC 的最佳配置 (Experiment 1-5)
-- [ ] Exp 1: 磁頭追蹤模式比較 (Fig. 5)
-- [ ] Exp 2: 模式長度 (Pattern Length) 測試 (Fig. 6)
-- [ ] Exp 3: 鞏固閾值 (Threshold) 測試 (Fig. 7)
-- [ ] Exp 4: Pattern Table 大小測試 (Fig. 8)
-- [ ] Exp 5: 硬體能耗估算 (DESTINY)
+### Phase 1: 參數敏感度分析 (Parameter Sensitivity Analysis)
+> 目標：確定 PRESHIFT 機制（L1/L2/LLC）的最佳配置並評估硬體成本。
+- [ ] **Exp 1: 磁頭追蹤模式比較 (Head Tracking)**
+  - 比較 Shift-based 與 Domain-based 模式，衡量正規化平均移位量。 (Ref: Fig. 5)
+- [ ] **Exp 2: 模式長度測試 (Pattern Length)**
+  - 測試 W=2~5 對準確度與延遲的影響，目標找出最佳長度 (W=2)。 (Ref: Fig. 6)
+- [ ] **Exp 3: 鞏固閾值測試 (Consolidation Threshold)**
+  - 測試觸發預移位所需的重複次數，目標鎖定閾值為 1。 (Ref: Fig. 7)
+- [ ] **Exp 4: 模式表大小測試 (Pattern Table Size)**
+  - 測試條目數 N=4~128 對移位延遲的影響，定案 L1/L2/LLC 的最佳大小。 (Ref: Fig. 8)
+- [ ] **Exp 5: 硬體成本估算 (Hardware Cost)**
+  - 使用 DESTINY 工具估算 Pattern Table 的面積、讀寫能耗與洩漏功率。 (Ref: TABLE III)
 
 ### Phase 2: 效能驗證 (Performance Evaluation)
-> 目標：比較 PRESHIFT 與 EAGER/LAZY 策略 (Experiment 6-10)
-- [ ] Exp 6: 各快取層級移位延遲分析 (Fig. 9)
-- [ ] Exp 7: 預移位完成率 (Fig. 10)
-- [ ] Exp 10: 整體記憶體延遲評估 (Fig. 13)
+> 目標：比較 PRESHIFT (P-P) 與現有的磁頭管理策略（EAGER、LAZY、NEXT-BLOCK, L-N 組合）在 58 個工作負載下的表現。
+- [ ] **Exp 6: 各快取層級移位延遲分析 (Average Shift Latency)**
+  - 比較 L1/L2/LLC 各層級減少的移位延遲 (正規化至 LAZY)。 (Ref: Fig. 9)
+- [ ] **Exp 7: 預移位操作完成率 (Completion Rate)**
+  - 測量預移位是否能在下一次請求到達前完成 (目標 > 95%)。 (Ref: Fig. 10)
+- [ ] **Exp 8: 預測行為與準確性分析 (Prediction Accuracy)**
+  - 針對 Best/Worst Case 工作負載，分析預測頻率與正確率。 (Ref: Fig. 11)
+- [ ] **Exp 9: 磁疇數量敏感度測試 (Domain Count Sensitivity)**
+  - 測試 64, 32, 16 磁疇數量對效能的影響，驗證 PRESHIFT 的可靠性。 (Ref: Fig. 12)
+- [ ] **Exp 10: 整體記憶體延遲評估 (Overall Memory Latency)**
+  - 評估對整個記憶體階層的系統級影響，目標改善幅度達 10%。 (Ref: Fig. 13)
 
 ## 🛠️ 技術細節與工具
 * **Simulator:** Gem5 / rtSim

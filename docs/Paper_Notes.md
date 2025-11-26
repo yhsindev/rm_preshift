@@ -2,7 +2,7 @@
 **年份/會議:** 2019 / IEEE International Parallel and Distributed Processing Symposium (IPDPS)
 **連結:** [PDF Link](https://ieeexplore.ieee.org/document/8821036)
 
-## 1. 核心概念 (一句話解釋)
+## 1. 核心概念 
 > 本文提出了一種基於模式預測 (Pattern-Based Prediction) 的 Racetrack Memory (RM) 磁頭預移 (Preshift) 機制，透過學習記憶體存取的位移歷史 (Shift History) 來提前移動磁頭，顯著減少存取延遲。
 
 ## 2. 問題與動機 (Problem & Motivation)
@@ -103,4 +103,4 @@ RM 的存取機制是序列化 (Serialized Access) 的。每一個 Cell 像是�
 | 8 | 預測行為與準確性分析 | 詳細分析 PRESHIFT 模式識別有效性 | 針對最佳與最差工作負載，統計預測頻率 (% requests provoke shift prediction) 與正確率 (% correct predictions) | Fig. 11 |
 | 9 | 磁疇數量敏感度 | 測試 RM 磁疇數量變化（64、32、16 domains）對 PRESHIFT vs. LAZY 的影響 | 測量不同磁疇數量下的正規化平均移位量；磁疇越少，PRESHIFT 改善幅度可能更大 | Fig. 12 |
 | 10 | 整體記憶體延遲 | 評估 PRESHIFT 對整體記憶體階層（L2、LLC、主記憶體）存取延遲的影響 | 測量正規化平均記憶體延遲並以 LAZY-LAZY (L-L) 為基準，顯示可帶來最高約 10% 改善 | Fig. 13 |
----
+

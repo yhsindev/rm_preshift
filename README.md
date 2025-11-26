@@ -5,8 +5,8 @@
 ## 📅 專案進度 (Project Roadmap)
 
 ### Phase 0: 實驗準備
-- [ ] Gem5 環境架設 (Docker image)
-- [ ] 取得 Benchmarks (SPEC2006, PARSEC)
+- [ ] Gem5 環境架設
+- [ ] 取得 Benchmarks (SPEC2006, PARSEC,...)
 - [ ] 整合 DESTINY 功耗模型工具
 
 ### Phase 1: 參數敏感度分析 (Parameter Sensitivity Analysis)

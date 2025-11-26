@@ -38,7 +38,7 @@
 ## 🛠️ 技術細節與工具
 * **Simulator:** Gem5 / NVMSim
 * **OS:** Debian 12?
-* **Benchmarks:** SPEC2006, PARSEC, YCSB
+* **Benchmarks:** SPEC2006 [29], PARSEC [30], NAS Parallel Benchmark [31], YCSB [32] 作為四個不同資料庫應用程式的介面(database：Cassandra [33], MongoDB [34], OrientDB [35], Redis [36])
 * **Modeling:** DESTINY (Area, Energy, Power)
 
 ## 📂 資料夾說明
